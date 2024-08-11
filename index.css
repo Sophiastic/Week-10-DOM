@@ -1,0 +1,13 @@
+h1 {
+  font-family: Verdana;
+  font-size: 50px;
+}
+.currencyinput {
+  position: relative;
+  display: inline-block;
+}
+.currencyinput input {
+  content: "$";
+  position: absolute;
+  transform: translate(0, -50%);
+}

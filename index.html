@@ -1,0 +1,76 @@
+<!--this assignment is meant to show a list of bills that are due and can be deleted once complete-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  <body background="USdollar.jpg" alt="blurry photo hundred dollar bills covering the background">
+    <h1 id="header" class="text-center"><strong>Get Your Bills Paid!!</strong></h1>
+    <div class="container">
+      <div class="card rounded-0 rounded-top">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <!--this is the name of the business who's bill you're paying-->
+                <label for="business-bill">Business Bill</label>
+                <input type="text" class="form-control" id="business-bill" />
+              </div>
+            </div>
+            <!--This is how much is due... i'm trying to figure out how to put the $ IN the text box view css -->
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="amount-due">Amount Due</label>
+                <span class="currencyinput">
+                  <input type="text" class="form-control" value = "$"id="amount-due"
+                /></span>
+              </div>
+            </div>
+          </div>
+            <!--This is the date that your bill is due-->
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="due-date">Due Date</label>
+                  <input type="date" class="form-control" id="due-date" />
+                  <!--This is how you will be paying the bill. -->
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="payment-method">Payment Method</label>
+                      <input
+                      type="name"
+                      class="form-control"
+                      id="payment-method"
+                      />
+                    </div>
+                    <!--submit button to enter data in table below-->
+                    <button id="add" class="btn btn-primary mt-2">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!--here is where all of my entered data is documented-->
+      <table class="table table-striped-columns" id="table">
+        <tr>
+          <thead class="table-dark">
+            <th>Business</th>
+            <th>Total</th>
+            <th>Due Date</th>
+            <th>Payment Method</th>
+            <th>All Done</th>
+          </thead>
+        </tr>
+      </table>
+    </div>
+  </head>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
